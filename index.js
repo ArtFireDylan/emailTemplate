@@ -2,6 +2,10 @@ var path = require('path')
 var emailTemplates = require('swig-email-templates')
 var fs = require('fs');
 
+var tips = require('./tips');
+
+console.log(tips.tips);
+
 var options = {
     root: path.join(__dirname, "src")
     // any other swig options allowed here
@@ -33,3 +37,4 @@ emailTemplates(options, function(err, render) {
         }
     });
 });
+
