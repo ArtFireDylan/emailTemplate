@@ -1,0 +1,28 @@
+{
+  "name": "emailTemplate",
+  "version": "1.0.0",
+  "description": "Artfire Email Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtFireDylan/emailTemplate.git"
+  },
+  "keywords": [
+    "Email"
+  ],
+  "author": "Dylan",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/ArtFireDylan/emailTemplate/issues"
+  },
+  "homepage": "https://github.com/ArtFireDylan/emailTemplate",
+  "private": true,
+  "dependencies": {
+    "fs": "0.0.2",
+    "path": "^0.11.14",
+    "swig-email-templates": "^1.3.0"
+  }
+}
