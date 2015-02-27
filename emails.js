@@ -19,7 +19,7 @@ var addEmail = function(heading, eventIds, tipIds, content,  id ) {
 }
 
 addEmail(
-    "HEADING/INTRO",
+    "HEADING_INTRO",
     [2],
     [1,3],
     "some test Content")
