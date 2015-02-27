@@ -16,8 +16,9 @@ emailTemplates(options, function(err, render) {
         properties: [{
                 "property":"og:title",
                 "content":"My First Campaign"
-                }]
-        
+                }],
+        tips: tips.tips,
+        headingText: "HEADING/INTRO"
     };
     render('index.html', context, function(err, html, text) {
         if(err) {
