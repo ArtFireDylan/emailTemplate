@@ -12,9 +12,14 @@ var options = {
 };
 emailTemplates(options, function(err, render) {
     var context = {
-        subject: 'test subject'
+        subject: 'test subject',
+        properties: [{
+                "property":"og:title",
+                "content":"My First Campaign"
+                }]
+        
     };
-    render('emailTemplate_body.htm', context, function(err, html, text) {
+    render('index.html', context, function(err, html, text) {
         if(err) {
             console.error(err)
         } else {
@@ -27,13 +32,13 @@ emailTemplates(options, function(err, render) {
                 }
             });
 
-            fs.writeFile(path.join(emailPaths, "test.text"), text, function(err) {
-                if(err) {
-                    console.log(err);
-                } else {
-                    console.log(emailPaths + "test.text");
-                }
-            });
+            //fs.writeFile(path.join(emailPaths, "test.text"), text, function(err) {
+            //    if(err) {
+            //        console.log(err);
+            //    } else {
+            //        console.log(emailPaths + "test.text");
+            //    }
+            //});
         }
     });
 });

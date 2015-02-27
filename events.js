@@ -1,7 +1,7 @@
 var events = [];
 
 
-var addTip = function(name, todoText, doneText, id ) {
+var addEvent = function(name, todoText, doneText, id ) {
 
 
     todoText = todoText || '';
@@ -17,11 +17,12 @@ var addTip = function(name, todoText, doneText, id ) {
     events.push(  {
         'id' : id,
         'todoText': todoText,
-        'relatedEvent': relatedEventIds,
-        'text' : text
+        'doneText': doneText,
+        'name' : name
     });
 }
 
-addTip("Event Name", "You need to do XXXX", "Congrats on doing Event")
+addEvent("Event XXXX", "You need to do XXXX", "Congrats on doing Event XXXX")
+addEvent("Event YYYY", "You need to do YYYY", "Congrats on doing Event YYYY")
 // export it
 exports.events = events;
