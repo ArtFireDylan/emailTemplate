@@ -16,6 +16,8 @@ var addTip = function(text, relatedEventIds, id ) {
     });
 }
 
-addTip("test")
+addTip("test 1")
+addTip("test 2")
+addTip("test 3")
 // export it
 exports.tips = tips;
