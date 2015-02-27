@@ -2,22 +2,23 @@ var path = require('path')
 var emailTemplates = require('swig-email-templates')
 var fs = require('fs');
 
-var tips = require('./tips');
+var events = require('./events').events;
+var tips = require('./tips').tips;
 
-console.log(tips.tips);
 
-var options = {
+var swigOptions = {
     root: path.join(__dirname, "src")
-    // any other swig options allowed here
 };
-emailTemplates(options, function(err, render) {
+
+
+emailTemplates(swigOptions, function(err, render) {
     var context = {
         subject: 'test subject',
         properties: [{
                 "property":"og:title",
                 "content":"My First Campaign"
                 }],
-        tips: tips.tips,
+        tips: tips,
         headingText: "HEADING/INTRO"
     };
     render('index.html', context, function(err, html, text) {
